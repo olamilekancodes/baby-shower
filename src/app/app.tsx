@@ -6,6 +6,7 @@ import { Details } from '@/features/details'
 import { GiftsSection } from '@/features/gifts'
 import { Guess } from '@/features/guess'
 import { IntroSection } from '@/features/intro'
+import { Music } from '@/features/music'
 import { PearlHero } from '@/features/pearl-hero'
 import { Rsvp } from '@/features/rsvp'
 import { ScheduleSection } from '@/features/schedule'
@@ -26,6 +27,7 @@ export function App() {
           <Rsvp />
         </main>
         <SiteFooter />
+        <Music />
       </ConfettiProvider>
     </MotionConfig>
   )

@@ -65,13 +65,14 @@ src/
 |---|---|
 | `pearl-hero` | The landing: pearl, fault lines and shards, cracks, flames, the closed and open panels, the pointer-following highlight |
 | `confetti` | Full-screen confetti canvas and `useConfetti()` (`shower`) via context |
-| `intro` | "A little of each of us" with the pink and blue circles that slide together as you scroll |
+| `intro` | "A little of each of us" with the pink and blue circles that slide together as you scroll, then breathe around a heartbeat glow with ripples and rising motes |
 | `details` | Editorial rows (date, time, place, dress) with copy address and a toast |
 | `countdown` | Light serif numbers in pink-to-blue gradient rings |
 | `guess` | Pink or blue: a circular colour fill from the click point, remembered in `localStorage` |
 | `schedule` | The afternoon timeline with a scroll-filled gradient line |
 | `gifts` | Three quiet gift cards with line icons |
 | `rsvp` | Form, validation, Formspree submission and the thank-you state |
+| `music` | A synthesised music-box lullaby (Web Audio, no audio files) and the fixed bottom-right play/pause pill |
 
 Rules:
 

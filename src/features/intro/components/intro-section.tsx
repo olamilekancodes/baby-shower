@@ -1,17 +1,11 @@
-import { motion, useScroll, useTransform } from 'motion/react'
-import { useRef } from 'react'
 import { Band } from '@/components/band'
 import { Eyebrow } from '@/components/eyebrow'
 import { Reveal } from '@/components/reveal'
 import { SplitHeading } from '@/components/split-heading'
+import { IntroVenn } from './intro-venn'
 import styles from './intro-section.module.css'
 
 export function IntroSection() {
-  const vennRef = useRef<HTMLDivElement>(null)
-  const { scrollYProgress } = useScroll({ target: vennRef, offset: ['start 90%', 'start 35%'] })
-  const pinkX = useTransform(scrollYProgress, [0, 1], ['-18%', '0%'])
-  const blueX = useTransform(scrollYProgress, [0, 1], ['18%', '0%'])
-
   return (
     <Band id="welcome" innerClassName={styles.grid} aria-labelledby="welcome-heading">
       <div>
@@ -26,11 +20,7 @@ export function IntroSection() {
           </p>
         </Reveal>
       </div>
-      <div ref={vennRef} className={styles.venn} aria-hidden="true">
-        <motion.i className={styles.pink} style={{ x: pinkX }} />
-        <motion.i className={styles.blue} style={{ x: blueX }} />
-        <motion.span style={{ opacity: scrollYProgress }}>baby</motion.span>
-      </div>
+      <IntroVenn />
     </Band>
   )
 }
