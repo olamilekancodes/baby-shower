@@ -1,0 +1,108 @@
+.form {
+  display: grid;
+  gap: 22px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+.field label,
+.fieldset legend {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.field input,
+.field select,
+.field textarea {
+  padding: 10px 0;
+  border: 0;
+  border-bottom: 1px solid color-mix(in oklab, var(--ink) 20%, white);
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 17px;
+  font-weight: 300;
+  transition: border-color 0.3s ease;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: color-mix(in oklab, var(--ink) 35%, white);
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-bottom-color: var(--lilac-deep);
+}
+
+.field textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.fieldset {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pills input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.pills label {
+  padding: 10px 20px;
+  border-radius: 999px;
+  box-shadow: 0 0 0 1px color-mix(in oklab, var(--ink) 18%, white);
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 160ms var(--ease-out);
+}
+
+.pills label:active {
+  transform: scale(0.97);
+}
+
+.pills input:checked + label {
+  background: var(--ink);
+  color: white;
+  box-shadow: 0 0 0 1px var(--ink);
+}
+
+.pills input:focus-visible + label {
+  outline: 2px solid var(--lilac-deep);
+  outline-offset: 3px;
+}
+
+.error {
+  min-height: 1.4em;
+  margin: 0;
+  font-size: 14px;
+  font-style: italic;
+  color: var(--error);
+}

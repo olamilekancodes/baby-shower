@@ -1,0 +1,66 @@
+.button {
+  position: relative;
+  overflow: hidden;
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 48px;
+  padding: 0 26px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  box-shadow: 0 0 0 1px color-mix(in oklab, var(--ink) 30%, transparent);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.ink {
+  background: var(--ink);
+  color: white;
+  box-shadow: none;
+}
+
+.ink::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    transparent 30%,
+    color-mix(in oklab, var(--pink) 45%, transparent) 45%,
+    color-mix(in oklab, var(--blue) 45%, transparent) 55%,
+    transparent 70%
+  );
+  transform: translateX(-110%);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .outline:hover {
+    background: color-mix(in oklab, var(--ink) 5%, transparent);
+  }
+
+  .ink:hover {
+    background: #3d3657;
+  }
+
+  .ink:hover::after {
+    transform: translateX(110%);
+    transition: transform 1s var(--ease-out);
+  }
+}

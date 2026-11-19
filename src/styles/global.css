@@ -1,0 +1,79 @@
+:root {
+  --paper: #fbf9fb;
+  --ink: #2f2a44;
+  --ink-soft: #6b6582;
+  --blue: #b9d4ef;
+  --blue-soft: #eef4fb;
+  --blue-deep: #5a8ccc;
+  --pink: #f4c6d6;
+  --pink-soft: #fcf0f4;
+  --pink-deep: #cf6f97;
+  --lilac: #cdbde9;
+  --lilac-deep: #8f78c6;
+  --line: color-mix(in oklab, var(--ink) 11%, var(--paper));
+  --error: #a4416a;
+
+  --font-display: 'Fraunces', 'Iowan Old Style', Georgia, serif;
+  --font-body: 'Manrope', 'Avenir Next', 'Helvetica Neue', Arial, sans-serif;
+
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  --gutter-left: max(20px, env(safe-area-inset-left, 0px));
+  --gutter-right: max(20px, env(safe-area-inset-right, 0px));
+
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+p {
+  max-width: 58ch;
+  margin: 0 0 14px;
+  font-weight: 300;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: 2px solid var(--lilac-deep);
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+::selection {
+  background: var(--lilac);
+  color: var(--ink);
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

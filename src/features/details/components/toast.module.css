@@ -1,0 +1,18 @@
+.region {
+  position: fixed;
+  left: 50%;
+  bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+  z-index: 70;
+  translate: -50% 0;
+  pointer-events: none;
+}
+
+.toast {
+  padding: 12px 20px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}

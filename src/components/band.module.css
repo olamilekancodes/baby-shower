@@ -1,0 +1,30 @@
+.band {
+  position: relative;
+  isolation: isolate;
+  padding-block: 128px;
+}
+
+.inner {
+  max-width: 1080px;
+  margin-inline: auto;
+  padding-left: var(--gutter-left);
+  padding-right: var(--gutter-right);
+}
+
+.paper {
+  background: var(--paper);
+}
+
+.pink {
+  background: var(--pink-soft);
+}
+
+.blue {
+  background: var(--blue-soft);
+}
+
+@media (max-width: 760px) {
+  .band {
+    padding-block: 88px;
+  }
+}
